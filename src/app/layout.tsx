@@ -70,7 +70,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body
         className={`${inter.variable} ${nunito.variable} ${roboto.variable}`}
       >
-        <main className="px-15">
+        <main>
           <Header />
           <Hero />
           {children}
