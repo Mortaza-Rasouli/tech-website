@@ -1,7 +1,5 @@
-import Header from "./components/layout/Header";
 import localFont from "next/font/local";
 import "./globals.css";
-import Hero from "./components/layout/Hero";
 
 const inter = localFont({
   src: [
@@ -33,21 +31,7 @@ const nunito = localFont({
   ],
   variable: "--font-nunito",
 });
-// const poppins = localFont({
-//   src: [
-//     {
-//       path: "../fonts/Poppins/Nunito-VariableFont_wght.ttf",
-//       weight: "100 900",
-//       style: "normal",
-//     },
-//     {
-//       path: "../fonts/Poppins/Nunito-Italic-VariableFont_wght.ttf",
-//       weight: "100 900",
-//       style: "italic",
-//     },
-//   ],
-//   variable: "--font-nunito",
-// });
+
 const roboto = localFont({
   src: [
     {
@@ -71,8 +55,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className={`${inter.variable} ${nunito.variable} ${roboto.variable}`}
       >
         <main>
-          <Header />
-          <Hero />
+          {/* <Header />
+          <Hero /> */}
           {children}
         </main>
       </body>

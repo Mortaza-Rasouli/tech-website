@@ -34,7 +34,7 @@ export default function Header() {
     <>
       {/* laptop header */}
       <header
-        className="relative hidden h-25 items-center justify-between px-15 min-[461px]:flex
+        className="relative hidden h-25 items-center justify-between px-15 min-[481px]:flex
            after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-linear-to-r after:from-[#0C68F44D] after:via-[#0C68F4B2] after:to-[#0C68F44D]"
       >
         {/* logo */}
@@ -48,7 +48,8 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="font-inter text-[18px] font-light text-[#0C0C0C] outline-none"
+              className="font-inter text-[18px] font-light text-[#0C0C0C] outline-none
+          pb-1 transition-all duration-300 ease-liner hover:text-[#0C68F4]"
             >
               {item.title}
             </Link>

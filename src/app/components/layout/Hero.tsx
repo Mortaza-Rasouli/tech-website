@@ -1,146 +1,39 @@
-// import Image from "next/image";
-
-// export default function Hero() {
-//   return (
-//     <>
-//       <div className="flex items-center justify-between mt-1 px-15">
-//         <div className="space-y-16">
-//           <h1 className="font-inter text-6xl font-semibold text-[#042352]">
-//             Tech Heim
-//           </h1>
-//           <p className="font-inter font-medium text-3xl text-[#042352]">
-//             &quot; Join the{" "}
-//             <span className="text-[#F45E0C]">digital revolution &quot;</span>
-//           </p>
-//           <button
-//             className="bg-[#F45E0C] py-2 px-6 rounded-lg text-[#FFFFFF]
-//           text-[16px] font-inter"
-//           >
-//             Explore More
-//           </button>
-//         </div>
-//         <div>
-//           <Image
-//             src="/images/laptop.png"
-//             alt="laptop-image"
-//             height={443}
-//             width={500}
-//           />
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section
-      className="
-        relative
-        mt-1
-        h-67.5
-        overflow-hidden
-
-        min-[461px]:flex
-        min-[461px]:h-auto
-        min-[461px]:items-center
-        min-[461px]:justify-between
-        min-[461px]:overflow-visible
-        min-[461px]:px-15
-      "
-    >
-      {/* Text */}
-      <div
-        className="
-          absolute
-          left-5
-          top-13.75
-          z-10
-
-          min-[461px]:static
-          min-[461px]:space-y-16
-        "
-      >
-        <h1
-          className="
-            font-inter
-            text-[32px]
-            font-semibold
-            leading-none
-            text-[#042352]
-
-            min-[461px]:text-6xl
-          "
-        >
+    <div className="relative h-110 min-[330px]:max-[481px]:h-45  flex items-center justify-between lg:px-15">
+      {/* text */}
+      <div className="absolute top-20 min-[330px]:max-[481px]:top-12">
+        <h1 className="whitespace-nowrap font-inter text-[54px] font-semibold leading-none text-[#042352] min-[330px]:max-[481px]:text-2xl">
           Tech Heim
         </h1>
 
-        <p
-          className="
-            mt-4
-            font-inter
-            text-[14px]
-            font-medium
-            text-[#042352]
-
-            min-[461px]:mt-0
-            min-[461px]:text-3xl
-          "
-        >
+        <p className="whitespace-nowrap mt-2 font-inter text-[28px] font-medium text-[#042352] min-[330px]:max-[481px]:text-[10px]">
           &quot; Join the{" "}
           <span className="text-[#F45E0C]">digital revolution &quot;</span>
         </p>
 
         <button
           type="button"
-          className="
-            mt-16
-            rounded-lg
-            bg-[#F45E0C]
-            px-5
-            py-2.5
-            font-inter
-            text-[14px]
-            text-white
-
-            min-[461px]:mt-0
-            min-[461px]:px-6
-            min-[461px]:py-2
-            min-[461px]:text-[16px]
-          "
+          className="mt-16 rounded-lg bg-[#F45E0C] px-15 py-2.5 font-inter text-[16px] whitespace-nowrap
+            text-white min-[330px]:max-[481px]:text-[10px] min-[330px]:max-[481px]:px-4 min-[330px]:max-[481px]:rounded-sm
+            min-[330px]:max-[481px]:py-2 min-[330px]:max-[481px]:mt-6"
         >
           Explore More
         </button>
       </div>
 
-      {/* Laptop */}
-      <div
-        className="
-          absolute
-          right-7
-          top-10
-          z-0
-
-          min-[461px]:static
-          min-[461px]:z-auto
-        "
-      >
+      {/* laptop */}
+      <div className="absolute  top-5 right-20 min-[330px]:max-[481px]:top-5 min-[330px]:max-[481px]:right-2">
         <Image
-          src="/images/laptop.png"
+          src="/images/laptop2.png"
           alt="Laptop"
           width={500}
           height={443}
-          priority
-          className="
-            h-auto
-            w-55
-
-            min-[461px]:w-125
-          "
+          className="min-[330px]:max-[481px]:w-45"
         />
       </div>
-    </section>
+    </div>
   );
 }
