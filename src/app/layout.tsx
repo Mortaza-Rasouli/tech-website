@@ -54,11 +54,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body
         className={`${inter.variable} ${nunito.variable} ${roboto.variable}`}
       >
-        <main>
-          {/* <Header />
-          <Hero /> */}
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );

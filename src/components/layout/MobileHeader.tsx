@@ -88,8 +88,7 @@ const otherNavItems = [
 
 export default function MobileHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const [isProductsOpen, setIsProductsOpen] = useState(true);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
 
   const closeMenu = () => {
     setIsMenuOpen(false);

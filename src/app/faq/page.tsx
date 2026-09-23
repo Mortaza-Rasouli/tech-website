@@ -1,7 +1,12 @@
+import Header from "@/src/components/layout/Header";
+
 export default function Faq() {
   return (
     <>
-      <h1>FAQ page</h1>
+      <div>
+        <Header />
+        <h1>FAQ page</h1>
+      </div>
     </>
   );
 }
