@@ -4,11 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { CiSearch, CiShoppingBasket } from "react-icons/ci";
-
+import { CiShoppingBasket } from "react-icons/ci";
 import MobileHeader from "./MobileHeader";
 import ProductsMenu from "./ProductsMenu";
 import UserMenu from "./UserMenu";
+import SearchModal from "./SearchModal";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -45,7 +45,8 @@ export default function Header() {
                 >
                   <Link
                     href={item.href}
-                    className="block font-inter text-[18px] font-light text-[#0C0C0C] outline-none transition-all duration-300 ease-linear hover:text-[#0C68F4]"
+                    className="block font-inter text-[18px] font-light text-[#0C0C0C] outline-none 
+                    transition-all duration-300 ease-linear hover:text-[#0C68F4]"
                   >
                     {item.title}
                   </Link>
@@ -59,7 +60,8 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="font-inter text-[18px] font-light text-[#0C0C0C] outline-none transition-all duration-300 ease-linear hover:text-[#0C68F4]"
+                className="font-inter text-[18px] font-light text-[#0C0C0C] outline-none transition-all 
+                duration-300 ease-linear hover:text-[#0C68F4]"
               >
                 {item.title}
               </Link>
@@ -68,10 +70,10 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center justify-center space-x-5">
-          <button type="button" aria-label="Search">
-            <CiSearch className="h-6 w-6" />
-          </button>
+          {/* search bar */}
+          <SearchModal />
 
+          {/* shopping cart */}
           <Link href="/cart" aria-label="Shopping cart">
             <CiShoppingBasket className="h-6 w-6" />
           </Link>
@@ -81,9 +83,14 @@ export default function Header() {
         </div>
       </header>
 
-      {isProductsMenuOpen && (
-        <div className="fixed bottom-0 left-0 right-0 top-25 z-40 bg-black/60" />
-      )}
+      <div
+        onClick={() => setIsProductsMenuOpen(false)}
+        className={`
+          fixed inset-0 -right-5 z-40 top-25 bg-black/50
+          transition-opacity duration-500
+          ${isProductsMenuOpen ? "visible opacity-100" : "invisible opacity-0"}
+        `}
+      />
 
       <MobileHeader />
     </>
