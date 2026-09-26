@@ -11,7 +11,7 @@ export default function Hero() {
 
         <p className="whitespace-nowrap mt-2 font-inter text-[28px] font-medium text-[#042352] min-[330px]:max-[481px]:text-[10px]">
           &quot; Join the{" "}
-          <span className="text-[#F45E0C]">digital revolution &quot;</span>
+          <span className="text-[#F45E0C]">digital revolution </span> &quot;
         </p>
 
         <button
@@ -25,13 +25,13 @@ export default function Hero() {
       </div>
 
       {/* laptop */}
-      <div className="absolute  top-5 right-20 min-[330px]:max-[481px]:top-5 min-[330px]:max-[481px]:right-2">
+      <div className="absolute h-auto top-5 right-20 min-[330px]:max-[481px]:top-5 min-[330px]:max-[481px]:right-2">
         <Image
           src="/images/laptop2.png"
           alt="Laptop"
           width={500}
           height={443}
-          className="min-[330px]:max-[481px]:w-45"
+          className="min-[330px]:max-[481px]:w-45 min-[330px]:max-[481px]:h-auto"
         />
       </div>
     </div>

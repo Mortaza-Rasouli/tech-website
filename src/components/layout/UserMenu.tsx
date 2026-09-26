@@ -102,11 +102,9 @@ export default function UserMenu({ isOpenMenu, setIsOpenMenu }: UserMenuProps) {
       </div>
 
       <div
-        className={`
-          fixed inset-0 -right-5 top-25 z-40 bg-black/50
-          transition-opacity duration-500
-          ${isOpenMenu ? "visible opacity-100" : "invisible opacity-0"}
-        `}
+        className={`fixed inset-0 right-0 top-25 z-40 bg-black/50 transition-all duration-500 pointer-events-none
+    ${isOpenMenu ? "translate-y-0 opacity-100" : "translate-y-0 opacity-0"}
+  `}
         onClick={() => setIsOpenMenu(false)}
       />
     </>

@@ -4,11 +4,11 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { CiShoppingBasket } from "react-icons/ci";
 import MobileHeader from "./MobileHeader";
 import ProductsMenu from "./ProductsMenu";
 import UserMenu from "./UserMenu";
 import SearchModal from "./SearchModal";
+import Cart from "./Cart";
 
 const navItems = [
   { title: "Home", href: "/" },
@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="relative z-50 hidden h-25 items-center justify-between px-15 min-[481px]:flex 
+        className="sticky top-0 bg-white z-50 hidden h-25 items-center justify-between px-15 min-[481px]:flex 
       after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:bg-linear-to-r
        after:from-[#0C68F44D] after:via-[#0C68F4B2] after:to-[#0C68F44D]"
       >
@@ -74,9 +74,7 @@ export default function Header() {
           <SearchModal />
 
           {/* shopping cart */}
-          <Link href="/cart" aria-label="Shopping cart">
-            <CiShoppingBasket className="h-6 w-6" />
-          </Link>
+          <Cart />
 
           {/* User menu */}
           <UserMenu isOpenMenu={isMenuOpen} setIsOpenMenu={setIsMenuOpen} />
@@ -87,7 +85,7 @@ export default function Header() {
         onClick={() => setIsProductsMenuOpen(false)}
         className={`
           fixed inset-0 -right-5 z-40 top-25 bg-black/50
-          transition-opacity duration-500
+          transition-opacity duration-500 pointer-events-none
           ${isProductsMenuOpen ? "visible opacity-100" : "invisible opacity-0"}
         `}
       />
